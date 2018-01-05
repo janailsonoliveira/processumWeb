@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Processum</title>
+</h:head>
+<style type="text/css">
+.ui-widget {
+	font-size: 12px !important;
+}
+
+.custom {
+	background-color: #353f4b;
+	height: 70px;
+	vertical-align: middle;
+}
+
+.barra-titulo .ui-panel-titlebar {
+	height: 90px;
+	font-size: 32px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.ui-menu.ui-widget {
+	min-width: 200px;
+	background-color: #2498d8;
+}
+
+.ui-menu.ui-widget a {
+	color: #ffffff;
+}
+
+.ui-menu {
+	width: 200px;
+}
+
+.ui-menu-child {
+	background-color: #2498d8;
+}
+
+.ui-menu-item {
+	background: blue;
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+
+.ui-g-4 {
+	vertical-align: middle;
+}
+
+.logo {
+	vertical-align: middle;
+}
+
+.menu .ui-panel-content {
+	min-height: 450px;
+	padding: 0px;
+}
+
+.menu .ui-panel {
+	min-height: 450px;
+	padding: 0px;
+}
+
+.menu {
+	min-height: 450px;
+	padding: 0px;
+}
+
+.form-menu {
+	background: #2290cd;
+}
+
+.usuario {
+	background: #2498d8;
+}
+
+.usuario img {
+	border-radius: 70px;
+	width: 70px;
+	margin: 0 15px 0 0;
+	float: left;
+}
+
+.valign-pai {
+	display: table;
+	padding: .5em;
+}
+
+.nome {
+	width: 220px;
+	color: white;
+}
+
+.topo {
+	padding: 0px;
+}
+
+td .acoo {
+	padding: 400px 200px;
+}
+
+.tabela table {
+	text-align: center;
+	table-layout: auto;
+}
+</style>
+<h:body>
+	<div class="ui-g">
+		<div class="ui-g-12 topo">
+			<div class="ui-g custom">
+				<div class="ui-g-4">
+					<div class="logo">
+						<img src="../../resources/images/logo-menu.png" />
+					</div>
+				</div>
+				<div class="ui-g-4"></div>
+				<div class="ui-g-4"></div>
+			</div>
+		</div>
+	</div>
+	<div class="ui-g">
+		<div class="ui-g-2 ui-g-nopad">
+			<ui:insert name="menu">
+				<ui:include src="../modulo/triagem/tiered-menu.xhtml" />
+			</ui:insert>
+		</div>
+		<div class="ui-g-10 ui-g-nopad">
+			<ui:insert name="corpo">Não Carregou</ui:insert>
+		</div>
+	</div>
+	<div class="ui-g">
+		<div class="ui-g-12">
+			<ui:insert name="rodape">Sistema Processum</ui:insert>
+		</div>
+	</div>
+</h:body>
+</html>

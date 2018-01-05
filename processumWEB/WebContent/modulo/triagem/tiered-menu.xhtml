@@ -1,0 +1,41 @@
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	<div class="usuario valign-pai">
+		<img src="../../resources/images/login-maior.jpg" alt="" />
+		<p class="nome valign">
+			Joao Davi ALmeida <small>Advogado</small>
+		</p>
+	</div>
+	<p:panel class="menu">
+		<p:growl id="messages" showDetail="true" />
+		<h:form class="form-menu">
+			<p:tieredMenu style="width:auto">
+
+				<p:submenu label="Processo (Triagem)" icon="ui-icon-gear">
+					<p:menuitem value="Listar documentos"
+						actionListener="#{menuView.save}" update="messages"
+						icon="ui-icon-document" />
+					<p:menuitem value="Relatorios" actionListener="#{menuView.update}"
+						update="messages" icon="ui-icon-note" />
+				</p:submenu>
+				<p:submenu label="Menuitem" icon="ui-icon-newwin">
+					<p:menuitem value="Delete" actionListener="#{menuView.delete}"
+						update="messages" ajax="false" icon="ui-icon-close" />
+				</p:submenu>
+				<p:separator />
+				<p:submenu label="MenuItem" icon="ui-icon-extlink">
+					<p:submenu label="Links">
+						<p:menuitem value="Item" url="http://www.prime.com.tr"
+							title="xxx" />
+						<p:menuitem value="Item" url="http://www.primefaces.org" />
+					</p:submenu>
+					<p:menuitem value="Item" />
+				</p:submenu>
+
+			</p:tieredMenu>
+		</h:form>
+	</p:panel>
+
+</ui:composition>

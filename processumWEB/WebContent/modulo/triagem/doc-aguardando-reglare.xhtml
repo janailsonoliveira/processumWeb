@@ -1,0 +1,52 @@
+<ui:composition
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:form>
+		<p:dataTable var="car" value="" rows="10" paginator="true"
+			paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+			rowsPerPageTemplate="5,10,15" styleClass="tabela">
+			<f:facet name="header">
+		       Aguardando Reglare
+		    </f:facet>
+			<p:column headerText="Id">
+				<h:outputText value="VERDE" />
+			</p:column>
+
+			<p:column headerText="N Sequencial">
+				<h:outputText value="12345" />
+			</p:column>
+
+			<p:column headerText="Status">
+				<h:outputText value="Em Analise - Triagem" />
+			</p:column>
+
+			<p:column headerText="Citacao">
+				<h:outputText value="22/12/2017 12:30" />
+			</p:column>
+
+			<p:column headerText="Estabelecimento">
+				<h:outputText value="Morumbi Shopping" />
+			</p:column>
+
+			<p:column headerText="Analista">
+				<h:outputText value="Joao Carlos Silva" />
+			</p:column>
+
+			<p:column headerText="Acao">
+				<p:commandButton id="iconOnly" icon="ui-icon-gear" title="Assumir Analise" />
+			</p:column>
+
+			<f:facet name="paginatorTopLeft">
+				<p:commandButton type="button" icon="fa fa-refresh" />
+			</f:facet>
+
+			<f:facet name="paginatorBottomRight">
+				<p:commandButton type="button" icon="fa fa-cloud-upload" />
+			</f:facet>
+		</p:dataTable>
+	</h:form>
+
+</ui:composition>

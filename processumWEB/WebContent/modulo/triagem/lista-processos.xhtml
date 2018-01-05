@@ -1,0 +1,34 @@
+
+<ui:composition template="../../templates/template.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:define name="corpo">
+		<p:panel id="basic" header="Triagem de Documentos" footer="Documentos"
+			style="margin-bottom:20px" styleClass="barra-titulo">
+			<p:tabView>
+				<p:tab title="Recebidos">
+					<ui:include src="/modulo/triagem/doc-recebidos.xhtml" />
+				</p:tab>
+
+				<p:tab title="Em Analise">
+					<ui:include src="/modulo/triagem/doc-em-analise.xhtml" />
+				</p:tab>
+				<p:tab title="Descartados">
+					<ui:include src="/modulo/triagem/doc-descartados.xhtml" />
+				</p:tab>
+				<p:tab title="Aguardando Def. Diretoria">
+					<ui:include src="/modulo/triagem/doc-aguardando-def-diretoria.xhtml" />
+				</p:tab>
+				<p:tab title="Em Analise Def. Diretoria">
+					<ui:include src="/modulo/triagem/doc-em-analise-def-diretoria.xhtml" />
+				</p:tab>
+				<p:tab title="Aguardando Reglare">
+					<ui:include src="/modulo/triagem/doc-aguardando-reglare.xhtml" />
+				</p:tab>
+			</p:tabView>
+		</p:panel>
+	</ui:define>
+</ui:composition>
